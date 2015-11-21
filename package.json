@@ -1,0 +1,22 @@
+{
+  "name": "random-gen",
+  "version": "0.0.1",
+  "description": "random generator",
+  "main": "random-gen.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustinws/random-gen.git"
+  },
+  "keywords": [
+    "random"
+  ],
+  "author": "Dustin Stiles <dustinwstiles@gmail.com> (http://dustinwstiles.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dustinws/random-gen/issues"
+  },
+  "homepage": "https://github.com/dustinws/random-gen#readme"
+}
