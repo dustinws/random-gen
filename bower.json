@@ -1,7 +1,7 @@
 {
   "name": "random-gen",
   "main": "random-gen.js",
-  "version": "0.0.121",
+  "version": "0.0.122",
   "homepage": "https://github.com/dustinws/random-gen",
   "authors": [
     "dustinwstiles <dustinwstiles@gmail.com>"

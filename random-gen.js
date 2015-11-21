@@ -49,29 +49,29 @@
 
   // Main random-gen object
   random = {
-    number(n) {
+    number: function(n) {
       return randomGen(n, nums);
     },
-    lower(n) {
+    lower: function(n) {
       return randomGen(n, lowerC);
     },
-    upper(n) {
+    upper: function(n) {
       return randomGen(n, upperC);
     },
-    letters(n) {
+    letters: function(n) {
       var arr = upperC
         .concat(lowerC);
 
       return randomGen(n, arr);
     },
-    alphaNum(n) {
+    alphaNum: function(n) {
       var arr = lowerC
         .concat(upperC)
         .concat(nums);
 
       return randomGen(n, arr);
     },
-    any(n) {
+    any: function(n) {
       var arr = lowerC
         .concat(upperC)
         .concat(nums)
