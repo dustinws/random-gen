@@ -18,9 +18,11 @@
     "index.html",
     "bower_components",
     "node_modules",
-    "spec"
+    "spec",
+    "docs"
   ],
   "dependencies": {
     "fn": "~0.0.316"
-  }
+  },
+  "tonicExampleFilename": "docs/example.js"
 }
