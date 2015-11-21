@@ -1,6 +1,6 @@
 {
   "name": "random-gen",
-  "version": "0.0.123",
+  "version": "0.0.124",
   "description": "random generator",
   "main": "random-gen.js",
   "scripts": {
@@ -24,5 +24,6 @@
   },
   "devDependencies": {
     "jasmine": "2.3.2"
-  }
+  },
+  "tonicExampleFilename": "docs/example.js"
 }
