@@ -1,6 +1,6 @@
 {
   "name": "random-gen",
-  "version": "0.0.124",
+  "version": "0.0.200",
   "description": "random generator",
   "main": "random-gen.js",
   "scripts": {
