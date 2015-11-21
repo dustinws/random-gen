@@ -2,13 +2,30 @@
   // Reference to the global object
   var root = this;
   var fn;
+  // All of our character sets to work with. mmmmm..
 
-  var random = {};
-
-  var nums = '1234567890';
-  var lowerC = 'abcdefghijklmnopqrstuvwxyz';
-  var upperC = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  var syms = '$!';
+  // Numerics
+  var nums = [
+    '1', '2', '3', '4',
+    '5', '6', '7', '8',
+    '9', '0'
+  ];
+  // Lower Case Letters
+  var lowerC = [
+    'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h','i',
+    'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
+    's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+  ];
+  // Upper Case Letters
+  var upperC = [
+    'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I',
+    'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R',
+    'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
+  ];
+  // Symbols
+  var syms = [
+    '!', '$'
+  ];
 
   // Provides a random int between 0 and n
   // Expects to be provided the `length` of whatever
@@ -17,97 +34,66 @@
     return Math.floor(Math.random() * n);
   }
 
-  // Creates a new array of length `n` and adds a random digit to the result
-  // string for each iteration. Uses `possibleIndex` to get a random index
-  random.number = function number(n) {
+  // The main `Engine`.
+  // Accepts an array of characters `chars` and returns a random string
+  // of `n` length using only those characters
+  function randomGen(n, chars) {
     n || (n = 8);
     // Base result set
     var res = '';
-    var numsArr = nums.split('');
     fn.each(function() {
-      res = res + numsArr[possibleIndex(numsArr.length)];
+      res = res + chars[possibleIndex(chars.length)];
     })(Array(n));
     return res;
+  }
+
+  // Main random-gen object
+  random = {
+    number(n) {
+      return randomGen(n, nums);
+    },
+    lower(n) {
+      return randomGen(n, lowerC);
+    },
+    upper(n) {
+      return randomGen(n, upperC);
+    },
+    letters(n) {
+      var arr = upperC
+        .concat(lowerC);
+
+      return randomGen(n, arr);
+    },
+    alphaNum(n) {
+      var arr = lowerC
+        .concat(upperC)
+        .concat(nums);
+
+      return randomGen(n, arr);
+    },
+    any(n) {
+      var arr = lowerC
+        .concat(upperC)
+        .concat(nums)
+        .concat(syms);
+
+      return randomGen(n, arr);
+    }
   };
 
-  random.lower = function lower(n) {
-    n || (n = 8);
-    // Base result set
-    var res = '';
-    var lowArr = lowerC.split('');
-    fn.each(function() {
-      res = res + lowArr[possibleIndex(lowArr.length)];
-    })(Array(n));
-    return res;
-  }
-
-  random.upper = function upper(n) {
-    n || (n = 8);
-    // Base result set
-    var res = '';
-    var upArr = upperC.split('');
-    fn.each(function() {
-      res = res + upArr[possibleIndex(upArr.length)];
-    })(Array(n));
-    return res;
-  }
-
-  random.letters = function letters(n) {
-    n || (n = 8);
-    // Base result set
-    var res = '';
-    var lowArr = upperC.split('').concat(lowerC.split(''));
-    fn.each(function() {
-      res = res + lowArr[possibleIndex(lowArr.length)];
-    })(Array(n));
-    return res;
-  }
-
-  random.any = function any(n) {
-    n || (n = 8);
-    // Base result set
-    var res = '';
-    var lowArr = lowerC
-      .split('')
-      .concat(upperC
-        .split('').concat(
-          nums.split('')
-            .concat(syms.split('')
-          )));
-
-
-    fn.each(function() {
-      res = res + lowArr[possibleIndex(lowArr.length)];
-    })(Array(n));
-    return res;
-  }
-
-
-  random.alphaNum = function alphaNum(n) {
-    n || (n = 8);
-    // Base result set
-    var res = '';
-    var lowArr = lowerC
-      .split('')
-      .concat(upperC.split('')
-      .concat(nums.split('')
-    ));
-
-    fn.each(function() {
-      res = res + lowArr[possibleIndex(lowArr.length)];
-    })(Array(n));
-    return res;
-  }
 
   // Exports
+  //--------
+
   if (typeof module !== 'undefined' && module.exports) {
+    // node
     fn = require('fn-util');
     module.exports = random;
   } else if (typeof window !== 'undefined') {
+    // browser
     fn = root.fn;
     root.random = random;
   } else {
     return random;
   }
-
 }).call(this);

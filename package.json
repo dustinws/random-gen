@@ -21,5 +21,8 @@
   "homepage": "https://github.com/dustinws/random-gen#readme",
   "dependencies": {
     "fn-util": "0.0.316"
+  },
+  "devDependencies": {
+    "jasmine": "2.3.2"
   }
 }

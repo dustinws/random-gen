@@ -17,7 +17,8 @@
     ".npmignore",
     "index.html",
     "bower_components",
-    "node_modules"
+    "node_modules",
+    "spec"
   ],
   "dependencies": {
     "fn": "~0.0.316"
