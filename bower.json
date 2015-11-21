@@ -1,0 +1,25 @@
+{
+  "name": "random-gen",
+  "main": "random-gen.js",
+  "version": "0.0.11",
+  "homepage": "https://github.com/dustinws/random-gen",
+  "authors": [
+    "dustinwstiles <dustinwstiles@gmail.com>"
+  ],
+  "description": "random generator",
+  "moduleType": [],
+  "keywords": [
+    "random"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".git",
+    ".npmignore",
+    "index.html",
+    "bower_components",
+    "node_modules"
+  ],
+  "dependencies": {
+    "fn": "~0.0.316"
+  }
+}

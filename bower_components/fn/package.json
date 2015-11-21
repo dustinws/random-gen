@@ -1,0 +1,30 @@
+{
+  "name": "fn-util",
+  "version": "0.0.316",
+  "description": "utility library",
+  "main": "fn.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustinws/fn.git"
+  },
+  "author": "Dustin Stiles <dustinwstiles@gmail.com> (http://dustinwstiles.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dustinws/fn/issues"
+  },
+  "homepage": "https://github.com/dustinws/fn#readme",
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "babel-preset-es2015": "6.1.18",
+    "gulp-babel": "6.1.0",
+    "gulp-concat": "2.6.0",
+    "gulp-jasmine": "2.2.1",
+    "gulp-plumber": "1.0.1",
+    "gulp-uglify": "1.5.1",
+    "jasmine": "2.3.2"
+  },
+  "tonicExampleFilename": "docs/example.js"
+}

@@ -1,0 +1,34 @@
+{
+  "name": "fn",
+  "version": "0.0.316",
+  "authors": [
+    "dustinwstiles <dustinwstiles@gmail.com>"
+  ],
+  "description": "utility library",
+  "main": "fn.js",
+  "moduleType": [
+    "es6",
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/dustinws/fn",
+  "ignore": [
+    "index.html",
+    "gulpfile.js",
+    ".npmignore",
+    ".gitignore",
+    ".git",
+    "src",
+    "spec"
+  ],
+  "_release": "0.0.316",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.316",
+    "commit": "47988f4aed35f91f3d9ad923b6ddfa88ec86c17c"
+  },
+  "_source": "git://github.com/dustinws/fn.git",
+  "_target": "~0.0.316",
+  "_originalSource": "fn",
+  "_direct": true
+}

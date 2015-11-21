@@ -1,0 +1,31 @@
+{
+  "name": "fn",
+  "version": "0.0.316",
+  "authors": [
+    "dustinwstiles <dustinwstiles@gmail.com>"
+  ],
+  "description": "utility library",
+  "main": "fn.js",
+  "moduleType": [
+    "es6",
+    "globals"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "ignore": [
+    "index.html",
+    "gulpfile.js",
+    ".npmignore",
+    ".gitignore",
+    ".git",
+    "src",
+    "spec"
+  ]
+}
