@@ -1,7 +1,7 @@
 {
   "name": "random-gen",
   "main": "random-gen.js",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "homepage": "https://github.com/dustinws/random-gen",
   "authors": [
     "dustinwstiles <dustinwstiles@gmail.com>"
@@ -13,6 +13,9 @@
   ],
   "license": "MIT",
   "ignore": [
+    "lib",
+    "src",
+    "tests",
     ".git",
     ".npmignore",
     "index.html",

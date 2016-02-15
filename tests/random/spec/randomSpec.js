@@ -9,7 +9,7 @@ var alphaNumRE = /^[a-zA-Z0-9]*$/;
 var anyRE = /^[a-zA-Z0-9\$\!]*$/;
 
 describe('random-gen.js', function () {
-  // random.number()
+
   it('Should produce a random integer that doesnt include any other chars', function () {
      var test1 = random.number();
      expect(test1.length).toBe(8);

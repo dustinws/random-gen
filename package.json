@@ -1,10 +1,10 @@
 {
   "name": "random-gen",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "random generator",
   "main": "random-gen.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "gulp jasmine"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,12 @@
   "homepage": "https://github.com/dustinws/random-gen#readme",
   "dependencies": {},
   "devDependencies": {
+    "babel-preset-es2015": "^6.5.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.0",
+    "gulp-jasmine": "^2.2.1",
+    "gulp-plumber": "^1.1.0",
     "jasmine": "2.3.2"
   },
   "tonicExampleFilename": "docs/example.js"
