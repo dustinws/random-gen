@@ -34,6 +34,16 @@
     return Math.floor(Math.random() * n);
   }
 
+  // Internal helper to avoid unnecessary dependencies
+  function range(n) {
+    var res = [], i = 1;
+    while (i <= n) {
+      res.push(i);
+      i++;
+    }
+    return res;
+  }
+
   // The main `Engine`.
   // Accepts an array of characters `chars` and returns a random string
   // of `n` length using only those characters
@@ -41,9 +51,11 @@
     n || (n = 8);
     // Base result set
     var res = '';
-    fn.each(function() {
+    // Removed unnecessary dependency
+    // @see range()
+    range(n).forEach(function() {
       res = res + chars[possibleIndex(chars.length)];
-    })(Array(n));
+    });
     return res;
   }
 
@@ -87,11 +99,10 @@
 
   if (typeof module !== 'undefined' && module.exports) {
     // node
-    fn = require('fn-util');
+    // Removed un-needed dependency 'fn-util'
     module.exports = random;
   } else if (typeof window !== 'undefined') {
     // browser
-    fn = root.fn;
     root.random = random;
   } else {
     return random;

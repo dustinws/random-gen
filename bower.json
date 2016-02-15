@@ -1,7 +1,7 @@
 {
   "name": "random-gen",
   "main": "random-gen.js",
-  "version": "0.0.200",
+  "version": "0.0.3",
   "homepage": "https://github.com/dustinws/random-gen",
   "authors": [
     "dustinwstiles <dustinwstiles@gmail.com>"
@@ -21,8 +21,6 @@
     "spec",
     "docs"
   ],
-  "dependencies": {
-    "fn": "~0.0.316"
-  },
+  "dependencies": {},
   "tonicExampleFilename": "docs/example.js"
 }
